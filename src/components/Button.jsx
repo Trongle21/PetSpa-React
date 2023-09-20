@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -14,13 +16,21 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element} - Button component.
  */
 
-const Button = ({ className, content }) => {
-  return <button className={className}>{content}</button>;
+const Button = ({ className, content, type, id, name, value }) => {
+  return (
+    <button className={className} type={type} id={id} name={name} value={value}>
+      {content}
+    </button>
+  );
 };
 
 Button.propTypes = {
-  className: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  content: PropTypes.string,
+  type: PropTypes.string,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default Button;

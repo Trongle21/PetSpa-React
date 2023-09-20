@@ -10,8 +10,8 @@
     position: fixed;
     z-index: 111111;
   }
-  
-  .header {
+
+  .page-header--section {
     position: fixed;
     width: 100%;
     z-index: 99999;
@@ -81,7 +81,7 @@
     color: var(--color-primary);
   }
   
-  .main--account_sigin--warapper {
+  .main--account_sigin--wrapper {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -95,7 +95,7 @@
     opacity: 0;
   }
   
-  .main--account_sigin--warapper.show {
+  .main--account_sigin--wrapper.show {
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
