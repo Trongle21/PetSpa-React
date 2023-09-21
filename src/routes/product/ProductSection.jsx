@@ -1,27 +1,33 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import ProductInfo from "./ProductInfo";
-import ProductCart from "./ProductCart";
 import ProductList from "./ProductList";
+import Cart from "../../components/Cart";
+import CartIcon from "../../components/CartIcon";
+import useProductContext from "../../hooks/useProductContext";
+import PathLink from "../../components/PathLink";
 
 const ProductSection = () => {
+  const [state] = useProductContext();
+
+  const { loading, error } = state;
+
   return (
     <section className="product--section">
       <div className="container">
-        <div className="path--link padding--top">
-          <a href="index.html">Home</a>
-          <i className="fa-solid fa-chevron-right"></i>
-          <h6>Product</h6>
-        </div>
+      <PathLink content="Product" />
         <div className="line"></div>
         <div className="product--section__wrapper">
-          <div className="cart--icon">
-            <i className="fa-solid fa-cart-shopping"></i>
-            <div className="quantity--product"></div>
-          </div>
+          <CartIcon />
           <ProductInfo />
-          <ProductList />
-          <ProductCart />
+          {loading ? (
+            <div>Loading</div>
+          ) : error ? (
+            <div>Error</div>
+          ) : (
+            <ProductList />
+          )}
+          <Cart />
         </div>
       </div>
     </section>

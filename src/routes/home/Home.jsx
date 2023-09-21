@@ -2,6 +2,8 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 import ServiceSection from "./ServiceSection";
+import CartIcon from "../../components/CartIcon";
+import Cart from "../../components/Cart";
 
 const Home = () => {
   return (
@@ -85,39 +87,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="cart--icon">
-        <i className="fa-solid fa-cart-shopping"></i>
-        <div className="quantity--product"></div>
-      </div>
-      <div className="product--cart">
-        <div className="product--cart__info">
-          <div className="product--cart__info--user">
-            <div
-              className="user--image"
-              // style="background-image: url('./src/image/Kaio_In_the_world_of_fantasy\(1\).png');"
-            ></div>
-            <h6>Kaiosuke</h6>
-          </div>
-          <div className="product--cart__info--close">
-            <i>
-              {" "}
-              <i className="fa-solid fa-xmark"></i>
-            </i>
-          </div>
-        </div>
-        <div className="cart--wrapper">
-          <div className="product--cart__pay"></div>
-        </div>
-        <div className="product--cart__btn">
-          <a href="#">
-            <button className="btn btn--secondary ">Palce An Order</button>
-          </a>
-          <div className="product--cart__total">
-            <h4>Total</h4>
-            <span>0 $</span>
-          </div>
-        </div>
-      </div>
+      <CartIcon />
+      <Cart />
     </main>
   );
 };

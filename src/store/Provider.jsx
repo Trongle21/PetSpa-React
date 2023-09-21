@@ -8,7 +8,6 @@ import { actions } from ".";
 // eslint-disable-next-line react/prop-types
 const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initState);
-
   useEffect(() => {
     let ignore = false;
     const getProducts = async () => {
@@ -19,8 +18,7 @@ const ProductProvider = ({ children }) => {
         if (!res.ok) {
           throw new Error("not found data");
         }
-        const data = await res.json();
-
+        const data = await res.json();  
         if (!ignore) dispatch(actions.getDataSuccess(data));
       } catch (error) {
         if (!ignore) dispatch(actions.getDataFailed(error));

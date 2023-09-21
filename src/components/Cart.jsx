@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-const ProductCart = () => {
+const Cart = () => {
   return (
     <div className="product--cart">
       <div className="product--cart__info">
@@ -35,4 +35,4 @@ const ProductCart = () => {
   );
 };
 
-export default ProductCart;
+export default Cart;

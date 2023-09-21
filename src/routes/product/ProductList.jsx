@@ -10,29 +10,7 @@ const ProductList = () => {
 
   const { products } = state;
 
-  // useEffect(() => {
-  //   let ignore = false;
-  //   const getProducts = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         "https://api-spa-pet-react.vercel.app/products"
-  //       );
-  //       if (!res.ok) {
-  //         throw new Error("not found data");
-  //       }
-  //       const data = await res.json();
-
-  //       if (!ignore) dispatch(actions.getDataSuccess(data));
-  //     } catch (error) {
-  //       if (!ignore) dispatch(actions.getDataFailed(error));
-  //     }
-  //   };
-
-  //   getProducts();
-  //   return () => {
-  //     ignore = true;
-  //   };
-  // }, [dispatch]);
+ 
 
   const handleAddProductToCart = (id, quantity = 1) => {
     dispatch(actions.addProductToCart(id, quantity));

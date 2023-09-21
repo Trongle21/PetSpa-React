@@ -7,7 +7,7 @@ import {
 const initState = {
   products: [],
   error: null,
-  loading: false,
+  loading: true,
 };
 
 const reducer = (state, action) => {

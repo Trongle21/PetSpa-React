@@ -1,14 +1,24 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import useProductContext from "../../hooks/useProductContext";
-import { useParams } from "react-router-dom";
 import HeroSectionDetailProduct from "./HeroSectionDetailProduct";
 import SectionDetail from "./SectionDetail";
 
 const DetailProduct = () => {
+  const [state] = useProductContext();
+
+  const { loading, error } = state;
+
   return (
     <main>
       <HeroSectionDetailProduct />
-      <SectionDetail />
+      {loading ? (
+        <div>Loading</div>
+      ) : error ? (
+        <div>Error</div>
+      ) : (
+        <SectionDetail />
+      )}
     </main>
   );
 };
