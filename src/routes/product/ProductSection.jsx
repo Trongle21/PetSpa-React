@@ -15,7 +15,7 @@ const ProductSection = () => {
   return (
     <section className="product--section">
       <div className="container">
-      <PathLink content="Product" />
+      <PathLink content="Productfff" />
         <div className="line"></div>
         <div className="product--section__wrapper">
           <CartIcon />
