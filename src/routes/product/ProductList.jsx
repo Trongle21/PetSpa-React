@@ -1,24 +1,24 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import useProductContext from "../../hooks/useProductContext";
+import useAppContext from "../../hooks/useAppContext";
 import { actions } from "../../store";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [state, dispatch] = useProductContext();
+  const { onAddProductToCart, productInCart } = useAppContext();
 
   const { products } = state;
 
- 
-
-  const handleAddProductToCart = (id, quantity = 1) => {
-    dispatch(actions.addProductToCart(id, quantity));
+  const handleAddProductToCart = (id) => {
+    onAddProductToCart({ productId: id, quantity: 1 });
   };
 
   return (
     <div className="product--list">
-      {products.map((product, index) => (
+      {products.map((product) => (
         <div className="product--item l-3 m-6 c-11" key={product.id}>
           <div className="product--item__wrapper">
             <div className="product--item__wrapper">
@@ -43,7 +43,10 @@ const ProductList = () => {
               >
                 Add To Cart
               </button>
-              {/* <Button className="btn btn--primary" onClick={() => handleAddProductToCart(product.id)} /> */}
+              {/* <Button
+                className="btn btn--primary"
+                onClick={() => onAddProductToCart(product.id)}
+              /> */}
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ import {
   GET_DATA_SUCCESS,
   GET_DATA_FAILED,
   ADD_PRODUCT_TO_CART,
+  DECREASE_PRODUCT,
+  INCREASE_PRODUCT,
 } from "./contain";
 
 const getDataSuccess = (payload) => {
@@ -18,11 +20,34 @@ const getDataFailed = (payload) => {
   };
 };
 
-const addProductToCart = (payload) => {
+const decreaseProduct = (payload) => {
   return {
-    type: ADD_PRODUCT_TO_CART,
+    type: DECREASE_PRODUCT,
     payload,
   };
 };
 
-export { getDataSuccess, getDataFailed, addProductToCart };
+const increaseProduct = (payload) => {
+  return {
+    type: INCREASE_PRODUCT,
+    payload,
+  };
+};
+
+const addProductToCart = (productId, quantity = 1) => {
+  return {
+    type: ADD_PRODUCT_TO_CART,
+    payload: {
+      productId,
+      quantity,
+    },
+  };
+};
+
+export {
+  getDataSuccess,
+  getDataFailed,
+  addProductToCart,
+  decreaseProduct,
+  increaseProduct,
+};
