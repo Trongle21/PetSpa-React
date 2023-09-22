@@ -4,6 +4,7 @@ import {
   GET_DATA_SUCCESS,
   DECREASE_PRODUCT,
   INCREASE_PRODUCT,
+  DELETE_PRODUCT,
 } from "./contain";
 
 const initState = {
@@ -16,6 +17,7 @@ const initState = {
 const reducer = (state, action) => {
   let exist;
   let newProduct;
+  let products;
   switch (action.type) {
     case GET_DATA_SUCCESS:
       return {
@@ -74,8 +76,14 @@ const reducer = (state, action) => {
           ? { ...product, quantity: product.quantity + 1 }
           : product
       );
-
       return { ...state, productCart: newProduct };
+
+    case DELETE_PRODUCT:
+      products = state.productCart.filter(
+        (product) => product.productId !== action.payload
+      );
+      return { ...state, productCart: products };
+
     default:
       throw new Error("Invalid action");
   }

@@ -3,11 +3,31 @@ import React, { useEffect, useState } from "react";
 import useAppContext from "../hooks/useAppContext";
 import useProductContext from "../hooks/useProductContext";
 import { actions } from "../store";
+import Button from "./Button";
 
 const Cart = () => {
-  const { isShowCart, productInCart, totalProductPrice } = useAppContext();
+  const {
+    isShowCart,
+    onCloseCart,
+    productInCart,
+    totalProductPrice,
+    onDeleteProduct,
+  } = useAppContext();
 
   const [state, dispatch] = useProductContext();
+
+  const handleCloseCart = () => {
+    onCloseCart();
+  };
+
+  const handleDeleteProduct = (id) => {
+    const isDelete = window.confirm(
+      "Bạn chắc chắn muốn xóa sản phẩm này khỏi cửa hàng"
+    );
+    if (isDelete) {
+      onDeleteProduct(id);
+    }
+  };
 
   const classCart = isShowCart ? "show--cart" : "product--cart";
 
@@ -24,7 +44,7 @@ const Cart = () => {
             ></div>
             <h6>Kaiosuke</h6>
           </div>
-          <div className="product--cart__info--close">
+          <div className="product--cart__info--close" onClick={handleCloseCart}>
             <i>
               {" "}
               <i className="fa-solid fa-xmark"></i>
@@ -50,27 +70,28 @@ const Cart = () => {
                     <span>$</span> {product.product.price}
                   </h5>
                   <div className="product--quantity">
-                    <button
+                    <Button
                       className="quantity decrease"
+                      content="-"
                       onClick={() =>
                         dispatch(actions.decreaseProduct(product.product.id))
                       }
-                    >
-                      -
-                    </button>
+                    />
                     <p>{product.quantity}</p>
-                    <button
+
+                    <Button
                       className="quantity increase"
+                      content="+"
                       onClick={() =>
                         dispatch(actions.increaseProduct(product.product.id))
                       }
-                    >
-                      +
-                    </button>
+                    />
                   </div>
                 </div>
                 <div className="product--item__delete">
-                  <button>
+                  <button
+                    onClick={() => handleDeleteProduct(product.product.id)}
+                  >
                     <i className="fa-solid fa-trash"></i>
                   </button>
                 </div>

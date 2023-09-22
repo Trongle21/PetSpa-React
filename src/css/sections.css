@@ -586,7 +586,7 @@
     overflow: hidden;
   }
   
-  .staf--info {
+  .staff--info {
     transition: all 0.3s;
   }
   
@@ -596,11 +596,11 @@
     margin-top: 2rem;
   }
   
-  .team-member--list__staff:hover .staf--info {
+  .team-member--list__staff:hover .staff--info {
     transform: translateY(-8.65rem);
   }
   
-  .staf--info__title {
+  .staff--info__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -610,7 +610,7 @@
     padding-bottom: 2rem;
   }
   
-  .staff--info__socail {
+  .staff--info__social {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -621,12 +621,12 @@
     height: 8.6rem;
   }
   
-  .staff--info__socail a {
+  .staff--info__social a {
     transition: all var(--animated-fast);
     overflow: hidden;
   }
   
-  .staff--info__socail a:hover {
+  .staff--info__social a:hover {
     color: var(--color-primary);
   }
   

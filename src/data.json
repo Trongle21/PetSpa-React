@@ -117,32 +117,32 @@
       "name": "Service",
       "description": "Vaccination are carried oit to keep pets in excellent condition",
       "image": "https://i.ibb.co/54FGPQm/service-Vaccination.png",
-      "href": "service.html"
+      "href": "/service"
     },
     {
       "name": "Product",
       "description": "Tidy up, full body wash to keep them stay clean",
       "image": "https://i.ibb.co/QMjKtn5/service-teth-cleaning.jpg",
-      "href": "product.html"
+      "href": "/product"
     },
     {
       "name": "About",
       "description": "General cart to keep your pet healthy as always",
       "image": "https://i.ibb.co/gyTKSVc/service-bath-tub.png",
-      "href": "about.html"
+      "href": "/about"
     },
     {
       "name": "Contact",
       "description": "Continuous control should be made for gum care",
       "image": "https://i.ibb.co/31zF81y/service-veterinarian.png",
-      "href": "contact.html"
+      "href": "/contact"
     }
   ],
   "homePackage": [
     {
       "name": "Frendly Pack",
       "price": 100,
-      "image": "./src/image/service_price_1.webp",
+      "image": "https://i.ibb.co/zH6QSDH/service-price-1.jpg",
       "packages": [
         "5 Day service",
         "Dog Walking",
@@ -154,7 +154,7 @@
     {
       "name": "Recommend pack",
       "price": 175,
-      "image": "./src/image/service_price_2.webp",
+      "image": "https://i.ibb.co/rvj5HhS/service-price-2.jpg",
       "packages": [
         "15 Day service",
         "Dog Walking",
@@ -166,7 +166,7 @@
     {
       "name": "Premium  Pack",
       "price": 200,
-      "image": "./src/image/service_price_3.webp",
+      "image": "https://i.ibb.co/vcKJ4X4/service-price-3.jpg",
       "packages": [
         "30 Day service",
         "Dog Walking",
@@ -178,7 +178,7 @@
   ],
   "homeMember": [
     {
-      "image": "./src/image/staff_1.jpg",
+      "image": "https://i.ibb.co/28N1d0V/staff-1.jpg",
       "info": [
         {
           "name": "Ariana Grande",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "image": "./src/image/staff_2.webp",
+      "image": "https://i.ibb.co/tzD7gPc/staff-2.jpg",
       "info": [
         {
           "name": "The Weeknd",
@@ -208,7 +208,7 @@
       ]
     },
     {
-      "image": "./src/image/staff_3.webp",
+      "image": "https://i.ibb.co/3yX1J1L/staff-3.png",
       "info": [
         {
           "name": "Adele",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "image": "./src/image/staff_4.webp",
+      "image": "https://i.ibb.co/6NcRdqh/staff-4.png",
       "info": [
         {
           "name": "G-Dragon",

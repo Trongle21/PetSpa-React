@@ -4,6 +4,7 @@ import {
   ADD_PRODUCT_TO_CART,
   DECREASE_PRODUCT,
   INCREASE_PRODUCT,
+  DELETE_PRODUCT,
 } from "./contain";
 
 const getDataSuccess = (payload) => {
@@ -34,6 +35,13 @@ const increaseProduct = (payload) => {
   };
 };
 
+const deleteProduct = (payload) => {
+  return {
+    type: DELETE_PRODUCT,
+    payload,
+  };
+};
+
 const addProductToCart = (productId, quantity = 1) => {
   return {
     type: ADD_PRODUCT_TO_CART,
@@ -50,4 +58,5 @@ export {
   addProductToCart,
   decreaseProduct,
   increaseProduct,
+  deleteProduct,
 };

@@ -3,10 +3,10 @@ import React, { useRef } from "react";
 import useAppContext from "../hooks/useAppContext";
 
 const CartIcon = () => {
-  const { onShowCart } = useAppContext();
+  const { onOpenCart } = useAppContext();
 
   return (
-    <div className="cart--icon" onClick={onShowCart}>
+    <div className="cart--icon" onClick={onOpenCart}>
       <i className="fa-solid fa-cart-shopping"></i>
       <div className="quantity--product"></div>
     </div>

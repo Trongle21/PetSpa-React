@@ -16,9 +16,9 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element} - Button component.
  */
 
-const Button = ({ className, content, type, id, name, value }) => {
+const Button = ({ className, content, type, id, name, value, onClick }) => {
   return (
-    <button className={className} type={type} id={id} name={name} value={value}>
+    <button className={className} type={type} id={id} name={name} value={value} onClick={onClick}>
       {content}
     </button>
   );
@@ -31,6 +31,7 @@ Button.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Button;

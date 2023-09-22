@@ -40,14 +40,44 @@ const ProductProvider = ({ children }) => {
 
 // eslint-disable-next-line react/prop-types
 const AppProvider = ({ children }) => {
+  const [isShowHeader, setIsShowHeader] = useState(false);
   const [isShowCart, setIsShowCart] = useState(false);
+  const [isShowPackage, setIsShowPackage] = useState(false);
   const [totalProductPrice, setTotalProductPrice] = useState(0);
   const [state, dispatch] = useProductContext();
 
   const { products } = state;
 
-  const handleShowCart = () => {
-    setIsShowCart(!isShowCart);
+  useEffect(() => {
+    function handleScroll() {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 200) {
+        const showHeader = true;
+        setIsShowHeader(showHeader);
+      } else {
+        const showHeader = false;
+        setIsShowHeader(showHeader);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  },[]);
+
+  const handleOpenCart = () => {
+    const openCart = true;
+    setIsShowCart(openCart);
+  };
+
+  const handleCloseCart = () => {
+    const closeCart = false;
+    setIsShowCart(closeCart);
+  };
+
+  const handleShowPackage = () => {
+    setIsShowPackage(!isShowPackage);
   };
 
   const findProductById = (id) => {
@@ -63,6 +93,11 @@ const AppProvider = ({ children }) => {
     quantity: product.quantity,
   }));
 
+  const handleDeleteProduct = (id) => {
+    // productInCart.map((product) => console.log(product.product.id));
+    dispatch(actions.deleteProduct(id));
+  };
+
   useEffect(() => {
     setTotalProductPrice(
       productInCart.reduce(
@@ -76,13 +111,18 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         ...state,
+        isShowHeader,
+        isShowCart,
+        isShowPackage,
         productInCart,
         totalProductPrice,
         // totalProduct,
         findProductById,
-        onShowCart: handleShowCart,
+        onShowPackage: handleShowPackage,
+        onOpenCart: handleOpenCart,
+        onCloseCart: handleCloseCart,
         onAddProductToCart: handleAddProductToCart,
-        isShowCart,
+        onDeleteProduct: handleDeleteProduct,
       }}
     >
       {children}

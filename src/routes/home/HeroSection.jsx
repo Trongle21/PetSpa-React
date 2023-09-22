@@ -2,9 +2,9 @@
 import React from "react";
 import data from "../../data.json";
 
-const HeroSection = () => {
-  const homeHero = data["homeHero"];
+const homeHero = data["homeHero"];
 
+const HeroSection = () => {
   const handlePrevImg = () => {
     const lists = document.querySelectorAll(".hero--content__img");
     const heroContent = document.querySelector(".hero--content");

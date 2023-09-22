@@ -3,6 +3,7 @@ const GET_DATA_FAILED = "get_data_failed";
 const ADD_PRODUCT_TO_CART = "add_product_to_cart";
 const DECREASE_PRODUCT = "decrease_product";
 const INCREASE_PRODUCT = "increase_product";
+const DELETE_PRODUCT = "delete_product";
 
 export {
   GET_DATA_SUCCESS,
@@ -10,4 +11,5 @@ export {
   ADD_PRODUCT_TO_CART,
   DECREASE_PRODUCT,
   INCREASE_PRODUCT,
+  DELETE_PRODUCT,
 };

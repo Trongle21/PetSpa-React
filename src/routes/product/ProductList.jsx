@@ -8,12 +8,16 @@ import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [state, dispatch] = useProductContext();
-  const { onAddProductToCart, productInCart } = useAppContext();
+  const { onAddProductToCart, onOpenCart } = useAppContext();
 
   const { products } = state;
 
   const handleAddProductToCart = (id) => {
     onAddProductToCart({ productId: id, quantity: 1 });
+  };
+
+  const handleShowCart = () => {
+    onOpenCart();
   };
 
   return (
@@ -37,16 +41,20 @@ const ProductList = () => {
               </div>
             </div>
             <div className="product--item__btn">
-              <button
+              {/* <button
                 className="btn btn--primary"
                 onClick={() => handleAddProductToCart(product.id)}
               >
                 Add To Cart
-              </button>
-              {/* <Button
+              </button> */}
+              <Button
                 className="btn btn--primary"
-                onClick={() => onAddProductToCart(product.id)}
-              /> */}
+                onClick={() => {
+                  handleAddProductToCart(product.id);
+                  handleShowCart();
+                }}
+                content="Add To Cart"
+              />
             </div>
           </div>
         </div>
