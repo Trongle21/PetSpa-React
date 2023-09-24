@@ -9,11 +9,15 @@ import RenderSlide from "./RenderSlide";
 
 const SectionDetail = () => {
   const { productId } = useParams();
-  const { findProductById, onAddProductToCart } = useAppContext();
+  const { findProductById, onAddProductToCart, onOpenCart } = useAppContext();
   const detailProduct = findProductById(productId);
 
   const handleAddProductToCart = (id) => {
     onAddProductToCart({ productId: id, quantity: 1 });
+  };
+
+  const handleOpenCart = () => {
+    onOpenCart();
   };
 
   useEffect(() => {
@@ -109,7 +113,10 @@ const SectionDetail = () => {
                   <div className="detail--product__btn">
                     <button
                       className="btn btn--primary"
-                      onClick={() => handleAddProductToCart(detailProduct.id)}
+                      onClick={() => {
+                        handleAddProductToCart(detailProduct.id),
+                          handleOpenCart();
+                      }}
                     >
                       Add To Cart
                     </button>

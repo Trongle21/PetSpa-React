@@ -43,6 +43,8 @@ const AppProvider = ({ children }) => {
   const [isShowHeader, setIsShowHeader] = useState(false);
   const [isShowCart, setIsShowCart] = useState(false);
   const [isShowPackage, setIsShowPackage] = useState(false);
+  const [isShowNavBar, setIsShowNavBar] = useState(false);
+
   const [totalProductPrice, setTotalProductPrice] = useState(0);
   const [state, dispatch] = useProductContext();
 
@@ -64,7 +66,7 @@ const AppProvider = ({ children }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  },[]);
+  }, []);
 
   const handleOpenCart = () => {
     const openCart = true;
@@ -80,6 +82,16 @@ const AppProvider = ({ children }) => {
     setIsShowPackage(!isShowPackage);
   };
 
+  const handleShowNavBar = () => {
+    // const showNav = true;
+    setIsShowNavBar(!isShowNavBar);
+  };
+
+  // const handleCloseNavBar = () => {
+  //   const closeNav = false;
+  //   setIsShowNavBar(closeNav);
+  // };
+
   const findProductById = (id) => {
     return products.find((product) => product.id === +id);
   };
@@ -93,8 +105,9 @@ const AppProvider = ({ children }) => {
     quantity: product.quantity,
   }));
 
+  const lengthProductCart = productInCart.length;
+
   const handleDeleteProduct = (id) => {
-    // productInCart.map((product) => console.log(product.product.id));
     dispatch(actions.deleteProduct(id));
   };
 
@@ -114,13 +127,15 @@ const AppProvider = ({ children }) => {
         isShowHeader,
         isShowCart,
         isShowPackage,
+        isShowNavBar,
         productInCart,
+        lengthProductCart,
         totalProductPrice,
-        // totalProduct,
         findProductById,
         onShowPackage: handleShowPackage,
         onOpenCart: handleOpenCart,
         onCloseCart: handleCloseCart,
+        onShowNavBar: handleShowNavBar,
         onAddProductToCart: handleAddProductToCart,
         onDeleteProduct: handleDeleteProduct,
       }}

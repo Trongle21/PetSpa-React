@@ -10,6 +10,7 @@ import Contact from "./routes/Contact";
 import SignUp from "./routes/SignUp";
 import { AppProvider, ProductProvider } from "./store/Provider";
 import DetailProduct from "./routes/DetailProduct/DetailProduct";
+import Payment from "./routes/payment/Payment";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +22,7 @@ function App() {
         { path: "/service", element: <Service /> },
         { path: "/product", element: <Product /> },
         { path: "/product/:productId", element: <DetailProduct /> },
+        { path: "/payment", element: <Payment /> },
         { path: "/about", element: <About /> },
         { path: "/contact", element: <Contact /> },
         { path: "/sign-up", element: <SignUp /> },

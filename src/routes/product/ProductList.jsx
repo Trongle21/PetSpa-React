@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import useProductContext from "../../hooks/useProductContext";
 import useAppContext from "../../hooks/useAppContext";
-import { actions } from "../../store";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 

@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import data from "../../data.json";
 import useAppContext from "../../hooks/useAppContext";
 
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState } from "react";
 const homePackage = data["homePackage"];
 
 const ServicePrice = () => {
+  const [hoverPackage, setHoverPackage] = useState(1);
+  const [choosePackage, setIsChoosePackage] = useState(null);
   const { isShowPackage, onShowPackage } = useAppContext();
 
   return (
@@ -20,9 +23,11 @@ const ServicePrice = () => {
           {homePackage.map((specialPackage, index) => (
             <div
               className={`plan--price l-4 m-12 c-12 ${
-                index === 1 ? "scale" : ""
+                index === hoverPackage ? "scale" : ""
               }`}
               key={index}
+              onMouseOver={() => setHoverPackage(5)}
+              onClick={() => setIsChoosePackage(index)}
             >
               <div
                 className="plan--price__image"
@@ -47,9 +52,9 @@ const ServicePrice = () => {
                   ))}
                 </ul>
               </div>
-              <a href="service.html" className="plane--price__btn">
+              <Link to="/service" className="plane--price__btn">
                 <button className="btn btn--primary">Buy Now</button>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

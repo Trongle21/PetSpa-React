@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 
 const HeaderLogo = () => {
   return (
-    <a href="/" className="header--logo">
+    <Link to="/" className="header--logo">
       <img src="https://i.ibb.co/Kr7fQvr/logo.png" alt="" />
       <h2>
         Pet<span>Spa</span>
       </h2>
-    </a>
+    </Link>
   );
 };
 

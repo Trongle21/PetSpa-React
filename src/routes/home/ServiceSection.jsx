@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import data from "../../data.json";
 
 const homeService = data["homeService"];
@@ -17,14 +18,14 @@ const ServiceSection = () => {
         <div className="service--section__list padding-bottom row">
           {homeService.map((service, index) => (
             <div className="service--list l-3 m-6 c-12" key={index}>
-              <a href={service.href} className="service--list__item  orange">
+              <Link to={service.href} className="service--list__item  orange">
                 <div
                   className="service--list__item--img box-sd-violet"
                   style={{ backgroundImage: `url(${service.image})` }}
                 ></div>
                 <h3 className="fw-700">{service.name}</h3>
                 <p className="text-center margin-top ">{service.description}</p>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

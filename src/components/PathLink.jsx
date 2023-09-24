@@ -1,23 +1,24 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 /**
  * @typedef PathLinkProps
  *
- * @property {string} content - Trang hiện tại
+ * @property {string} content - Trang hiện tại.
  */
 
 /**
  *
- * @param {PathLinkProps} props  - Thuộc tính PathLink
- * @returns {JSX.Element} - PathLink components
+ * @param {PathLinkProps} props  - Thuộc tính PathLink.
+ * @returns {JSX.Element} - PathLink component.
  */
 
 const PathLink = ({ content }) => {
   return (
     <div className="path--link">
-      <a href="/">Home</a>
+      <Link to="/">Home</Link>
       <i className="fa-solid fa-chevron-right"></i>
       <h6>{content}</h6>
     </div>

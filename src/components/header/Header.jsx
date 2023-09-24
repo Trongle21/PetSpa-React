@@ -9,14 +9,21 @@ import HeaderSignIn from "./HeaderSignIn";
 import useAppContext from "../../hooks/useAppContext";
 
 const Header = () => {
-  const { isShowHeader } = useAppContext();
+  const { isShowHeader, isShowNavBar, onShowNavBar } = useAppContext();
+
+  const handleCloseNavBar = () => {
+    onShowNavBar();
+  };
 
   return (
     <header className="page-header--section">
       <div className={`page--header ${isShowHeader ? "bg" : ""}`}>
         <HeaderBar />
         <HeaderLogo />
-        <div className="overlay"></div>
+        <div
+          className={`overlay ${isShowNavBar ? "show--overlay" : ""}`}
+          onClick={handleCloseNavBar}
+        ></div>
         {/* PC */}
         <HeaderNav />
         <HeaderSignIn />

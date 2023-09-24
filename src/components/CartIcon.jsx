@@ -1,14 +1,18 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import useAppContext from "../hooks/useAppContext";
 
 const CartIcon = () => {
-  const { onOpenCart } = useAppContext();
+  const { onOpenCart, lengthProductCart } = useAppContext();
 
   return (
     <div className="cart--icon" onClick={onOpenCart}>
       <i className="fa-solid fa-cart-shopping"></i>
-      <div className="quantity--product"></div>
+      <div className="quantity--product">
+        {lengthProductCart > 0 ? (
+          <div className="number">{lengthProductCart}</div>
+        ) : null}
+      </div>
     </div>
   );
 };

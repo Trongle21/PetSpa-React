@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import data from "../../data.json";
+import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 const homeHero = data["homeHero"];
 
@@ -24,12 +26,20 @@ const HeroSection = () => {
     <section className="hero--section">
       <div className="hero--section__container">
         <div className="hero--content">
-          {homeHero.map((img, index) => (
+          {homeHero.map((hero, index) => (
             <div
               className="hero--content__img"
               key={index}
-              style={{ backgroundImage: `url(${img.image})` }}
-            ></div>
+              style={{ backgroundImage: `url(${hero.image})` }}
+            >
+              <div className="hero--content__detail">
+                <div className="content--info">{hero.name}</div>
+                <div className="content--info__des">{hero.description}</div>
+                <Link to="/service">
+                  <Button className={hero.button} content="Book a Schedule" />
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </div>

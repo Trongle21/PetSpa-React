@@ -13,9 +13,7 @@ const HeroSectionProduct = () => {
         <div className="section--hero__wrapper">
           <div className="content--hero__name">We enjoy our work</div>
           <div className="content--hero__des">
-            It is an excellent option for kenneling your pet, different turnout
-            times for potty and play, and not to mention all of this stress is
-            in addition to not having you around
+          
           </div>
         </div>
       </div>

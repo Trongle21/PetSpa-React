@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GiftSection = () => {
   return (
@@ -17,9 +18,9 @@ const GiftSection = () => {
               Contact our customer services and get your special gift for the
               first package purchase
             </p>
-            <a href="">
+            <Link to="/contact">
               <button className="btn btn--primary">Contact Us</button>
-            </a>
+            </Link>
           </div>
           <div
             className="gift--section__wrapper--image l-6 m-6"

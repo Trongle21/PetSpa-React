@@ -9,10 +9,14 @@ import useAppContext from "../../hooks/useAppContext";
 const RenderSlide = () => {
   const [state] = useProductContext();
   const { products } = state;
-  const { onAddProductToCart } = useAppContext();
+  const { onAddProductToCart, onOpenCart } = useAppContext();
 
   const handleAddProductToCart = (id) => {
     onAddProductToCart({ productId: id, quantity: 1 });
+  };
+
+  const handleOpenCart = () => {
+    onOpenCart();
   };
 
   useEffect(() => {
@@ -61,7 +65,9 @@ const RenderSlide = () => {
               <div className="product--item__btn">
                 <button
                   className="btn btn--primary"
-                  onClick={() => handleAddProductToCart(product.id)}
+                  onClick={() => {
+                    handleAddProductToCart(product.id), handleOpenCart();
+                  }}
                 >
                   Add To Cart
                 </button>
