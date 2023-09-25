@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import useAppContext from "../hooks/useAppContext";
 
 const CartIcon = () => {

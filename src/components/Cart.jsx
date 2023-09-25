@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import useAppContext from "../hooks/useAppContext";
 import useProductContext from "../hooks/useProductContext";
@@ -9,9 +8,7 @@ import Button from "./Button";
 const Cart = () => {
   const {
     isShowCart,
-    isShowNavBar,
     onCloseCart,
-    onShowNavBar,
     productInCart,
     totalProductPrice,
     onDeleteProduct,

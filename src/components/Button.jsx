@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -18,7 +17,14 @@ import PropTypes from "prop-types";
 
 const Button = ({ className, content, type, id, name, value, onClick }) => {
   return (
-    <button className={className} type={type} id={id} name={name} value={value} onClick={onClick}>
+    <button
+      className={className}
+      type={type}
+      id={id}
+      name={name}
+      value={value}
+      onClick={onClick}
+    >
       {content}
     </button>
   );

@@ -1,12 +1,9 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import data from "../../data.json";
 
-const homeService = data["homeService"];
-
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-
 const ServiceSection = () => {
+  const homeService = data["homeService"];
   return (
     <section className="service--section container-padding">
       <div className="container">

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useForm, FormProvider } from "react-hook-form";
@@ -73,7 +72,7 @@ const PayBill = () => {
           <h3>Information</h3>
           <FormControl
             label="Email"
-            name="info.email"
+            name="info.name"
             placeholder="Enter your email"
           />
           <FormControl

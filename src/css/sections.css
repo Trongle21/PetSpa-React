@@ -126,7 +126,6 @@
 
 .main--account__form-group input:hover {
   padding: 1rem;
-  border-radius: 2px;
   color: #000;
   border: 1px solid var(--color-primary);
 }
@@ -152,10 +151,8 @@
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  border: 2px solid gray;
+  width: 1rem;
+  height: 1rem;
   outline: none;
   cursor: pointer;
 }
@@ -853,9 +850,9 @@ input[type="checkbox"]:checked {
   color: var(--color-primary);
 }
 
-.service--section__page--wrapper_pc {
+/* .service--section__page--wrapper_pc {
   justify-content: end !important;
-}
+} */
 
 .service--image img {
   width: 16rem;
@@ -1640,9 +1637,9 @@ input[type="checkbox"]:checked {
   color: #8e8e8e;
 }
 
-.about--section__misstion {
+.about--section__mission {
   padding-top: 16rem;
-  padding-bottom: 20rem;
+  padding-bottom: 16rem;
 }
 
 .about--section__principles {
@@ -2056,6 +2053,14 @@ input[type="checkbox"]:checked {
 
 .contact--form__list--wrapper select {
   padding: 1rem;
+  background: transparent;
+  border: 1px solid #e3e3e3;
+  cursor: pointer;
+}
+
+.contact--form__list--wrapper select:hover {
+  padding: 1rem;
+  background: transparent;
   border: 1px solid #e3e3e3;
   cursor: pointer;
 }
@@ -2092,14 +2097,15 @@ input[type="checkbox"]:checked {
 }
 
 .contact--form__checkbox {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .contact--form__checkbox h3 {
-  font-size: 1.6rem;
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--color-secondary);
   font-weight: 700;
-  margin-bottom: 2rem;
-  margin-left: -1rem;
+  margin-bottom: 4rem;
 }
 
 .contact--form__checkbox--wrapper {
@@ -2122,7 +2128,7 @@ input[type="checkbox"]:checked {
 }
 
 .contact--form__message label {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
@@ -2139,4 +2145,15 @@ input[type="checkbox"]:checked {
 .contact--form__btn {
   text-align: center;
   margin-top: 6rem;
+}
+
+.checkbox--form .main--account__form-group {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+}
+
+.checkbox--form .main--account__form-group input {
+  margin-right: 0.4rem;
 }

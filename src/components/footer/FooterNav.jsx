@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import data from "../../data.json";
 
@@ -13,7 +12,9 @@ const FooterNav = () => {
           <h6 className=" fw-800">Support</h6>
           <ul className="footerInfoSp">
             {footerInfoSp.map((infoSp, index) => (
-              <a key={index} href={infoSp.url}>{infoSp.name}</a>
+              <a key={index} href={infoSp.url}>
+                {infoSp.name}
+              </a>
             ))}
           </ul>
         </nav>
@@ -22,7 +23,9 @@ const FooterNav = () => {
           <h6 className=" fw-800">About</h6>
           <ul className="footerInfoAbout">
             {footerInfoAbout.map((infoAb, index) => (
-                <a key={index} href={infoAb.url}>{infoAb.name}</a>
+              <a key={index} href={infoAb.url}>
+                {infoAb.name}
+              </a>
             ))}
           </ul>
         </nav>

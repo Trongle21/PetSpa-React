@@ -372,7 +372,7 @@
 
 /* Mobile */
 
-@media (max-width:739px) {
+@media (max-width:793px) {
     .container {
         padding: 0rem 2rem !important;
     }
@@ -526,7 +526,7 @@
         font-size: 2rem;
         padding-right: 2rem;
     }
-    .service--section__page--warpper_pc {
+    .service--section__page--wrapper_pc {
         display: none;
     }
     .service--section__page--wrapper_mb {
@@ -877,7 +877,7 @@
 
 /* Tablet */
 
-@media (min-width: 739px) and (max-width: 1023px) {
+@media (min-width: 794px) and (max-width: 1023px) {
     /*Nav Bar*/
     .header--bar {
         display: block;

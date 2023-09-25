@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from "react";
 import HeaderAccountIcon from "./HeaderAccountIcon";
 import HeaderBar from "./HeaderBar";

@@ -1,8 +1,9 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import useProductContext from "../../hooks/useProductContext";
 import HeroSection from "../../components/HeroSection";
 import SectionDetail from "./SectionDetail";
+import CartIcon from "../../components/CartIcon";
+import Cart from "../../components/Cart";
 
 const DetailProduct = () => {
   const [state] = useProductContext();
@@ -23,6 +24,8 @@ const DetailProduct = () => {
       ) : (
         <SectionDetail />
       )}
+      <CartIcon />
+      <Cart />
     </main>
   );
 };

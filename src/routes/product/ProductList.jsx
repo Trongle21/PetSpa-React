@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import useProductContext from "../../hooks/useProductContext";
 import useAppContext from "../../hooks/useAppContext";

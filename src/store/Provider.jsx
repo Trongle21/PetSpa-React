@@ -5,7 +5,6 @@ import reducer, { initState } from "./reducer";
 import useProductContext from "../hooks/useProductContext";
 import { actions } from ".";
 
-// eslint-disable-next-line react/prop-types
 const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initState);
   useEffect(() => {
@@ -38,7 +37,6 @@ const ProductProvider = ({ children }) => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
 const AppProvider = ({ children }) => {
   const [isShowHeader, setIsShowHeader] = useState(false);
   const [isShowCart, setIsShowCart] = useState(false);

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import useProductContext from "../../hooks/useProductContext";
 import "owl.carousel/dist/assets/owl.carousel.css";

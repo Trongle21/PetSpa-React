@@ -237,5 +237,138 @@
         }
       ]
     }
+  ],
+
+  "data_service": [
+    {
+      "id": "service-1",
+      "name": "Dog Walking"
+    },
+    {
+      "id": "service-2",
+      "name": "Grooming"
+    },
+    {
+      "id": "service-3",
+      "name": "Boarding"
+    },
+    {
+      "id": "service-4",
+      "name": "Pet Sitting"
+    }
+  ],
+  "dog_walking": {
+    "30 minus": [
+      {
+        "name": "10 Walk Pack",
+        "price": 285
+      },
+      {
+        "name": "20 Walk Pack",
+        "price": 540
+      },
+      {
+        "name": "50 Walk Pack",
+        "price": 1020
+      }
+    ],
+    "60 minus": [
+      {
+        "name": "10 Walk Pack",
+        "price": 475
+      },
+      {
+        "name": "20 Walk Pack",
+        "price": 900
+      },
+      {
+        "name": "50 Walk Pack",
+        "price": 1700
+      }
+    ]
+  },
+  "grooming": {
+    "luxuryBath": [
+      {
+        "name": "Bath & blow dry"
+      },
+      {
+        "name": "Ear cleaning"
+      },
+      {
+        "name": "Nail trim"
+      },
+      {
+        "name": "Paw pad trim"
+      },
+      {
+        "name": "Blueberry facial"
+      }
+    ],
+    "fullGroom": [
+      {
+        "name": "Hair cut & style"
+      },
+      {
+        "name": "Bath & blow dry"
+      },
+      {
+        "name": "Ear cleaning"
+      },
+      {
+        "name": "Nail trim"
+      },
+      {
+        "name": "Paw pad trim"
+      },
+      {
+        "name": "Sanitary trim"
+      }
+    ]
+  },
+  "boarding": [
+    {
+      "name": "Bath & blow dry",
+      "price": 100,
+      "time": "Night"
+    },
+    {
+      "name": "Ear cleaning",
+      "price": 95,
+      "time": "Night"
+    },
+    {
+      "name": "Nail trim",
+      "price": 90,
+      "time": "Night"
+    }
+  ],
+  "petSitting": [
+    {
+      "name": "Cat Visit",
+      "price": 40
+    },
+    {
+      "name": "Puppy Visit",
+      "price": 40
+    }
+  ],
+  "principles": [
+    {
+      "name": "Excellence",
+      "description": "Be the best while doing our best, both in our personal lives and as a company"
+    },
+    {
+      "name": "Integrity",
+      "description": "The foundation of trust and the fabric of all meaningful relationships – not only with our clients and the pets who rely on us, but also with our team, who we rely on every day"
+    },
+    {
+      "name": "Passion",
+      "description": "For what we do, and the pets we do it for – otherwise why do it?"
+    },
+    {
+      "name": "Hospitality",
+      "description": "How we welcome others into our family – with open arms, courtesy, kindness and a sense of belonging"
+    }
   ]
 }

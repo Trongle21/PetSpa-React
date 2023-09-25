@@ -1,7 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import useAppContext from "../../hooks/useAppContext";
-import useProductContext from "../../hooks/useProductContext";
 
 const PayInfo = () => {
   const { productInCart, totalProductPrice } = useAppContext();

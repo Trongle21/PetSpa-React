@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 
 const HeroSectionProduct = () => {
@@ -12,9 +11,7 @@ const HeroSectionProduct = () => {
       >
         <div className="section--hero__wrapper">
           <div className="content--hero__name">We enjoy our work</div>
-          <div className="content--hero__des">
-          
-          </div>
+          <div className="content--hero__des"></div>
         </div>
       </div>
     </section>

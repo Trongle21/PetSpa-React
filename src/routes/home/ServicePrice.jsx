@@ -1,16 +1,15 @@
+import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import data from "../../data.json";
 import useAppContext from "../../hooks/useAppContext";
-
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
-const homePackage = data["homePackage"];
 
 const ServicePrice = () => {
   const [hoverPackage, setHoverPackage] = useState(1);
   const [choosePackage, setIsChoosePackage] = useState(null);
   const { isShowPackage, onShowPackage } = useAppContext();
-
+  const homePackage = data["homePackage"];
+  
   return (
     <section className="service-prices--section container-padding">
       <div className="service-prices--section__img"></div>

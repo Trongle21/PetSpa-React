@@ -1,8 +1,6 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import HeroSection from "../../components/HeroSection";
 import SectionPay from "./SectionPay";
-import CartIcon from "../../components/CartIcon";
 
 const Payment = () => {
   return (

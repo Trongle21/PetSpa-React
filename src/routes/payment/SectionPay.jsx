@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import PathLink from "../../components/PathLink";
 import PayBill from "./PayBill";
@@ -6,7 +5,6 @@ import PaymentMethods from "./PaymentMethods";
 import PayInfo from "./PayInfo";
 
 const SectionPay = () => {
-
   return (
     <section className="section--pay">
       <div className="container">
@@ -16,7 +14,7 @@ const SectionPay = () => {
           <PayBill />
           <PaymentMethods />
           <div className="line" />
-          <PayInfo f/>
+          <PayInfo f />
         </div>
       </div>
     </section>
