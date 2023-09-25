@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const contactForm = z.object({
   info: z.object({
     email: z
-      .string({ required_error: "Bạn chưa nhập tên" })
+      .string({ required_error: "Bạn chưa nhập email" })
       .email({ message: "Email không hợp lệ" }),
     first_name: z
       .string({ required_error: "Bạn chưa nhập first name" })
@@ -25,7 +25,7 @@ const contactForm = z.object({
     subject: z
       .string({ required_error: "Bạn chưa nhập subject" })
       .trim()
-      .min(1, { message: "Bạn chưa nhập last name" }),
+      .min(1, { message: "Bạn chưa nhập subject" }),
     message: z.string(),
     dogWalking: z.boolean(),
     grooming: z.boolean(),
@@ -45,14 +45,14 @@ const ContactSection = () => {
         first_name: "",
         last_name: "",
         email: "",
-        phone_number: "",
+        phone_number: null,
         subject: "",
         message: "",
-        dogWalking: "",
-        petSitting: "",
-        grooming: "",
-        boarding: "",
-        product: "",
+        dogWalking: false,
+        petSitting: false,
+        grooming: false,
+        boarding: false,
+        product: false,
       },
     },
   });
