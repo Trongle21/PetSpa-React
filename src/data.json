@@ -370,5 +370,29 @@
       "name": "Hospitality",
       "description": "How we welcome others into our family – with open arms, courtesy, kindness and a sense of belonging"
     }
+  ],
+  "selectedPetTypes": [
+    {
+      "name": "Cat and Dog",
+      "value": "cat and dog"
+    },
+    {
+      "name": "Cat",
+      "value": "cat"
+    },
+    {
+      "name": "Dog",
+      "value": "dog"
+    }
+  ],
+  "paymentMethods": [
+    {
+      "name": "Bank transfer",
+      "value": "bank"
+    },
+    {
+      "name": "Delivery",
+      "value": "delivery"
+    }
   ]
 }

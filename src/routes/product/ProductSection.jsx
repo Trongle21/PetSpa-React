@@ -23,9 +23,9 @@ const ProductSection = () => {
           {!isShowCart && <CartIcon />}
           <ProductInfo />
           {loading ? (
-            <div>Loading</div>
+            <div>Loading ...</div>
           ) : error ? (
-            <div>Error</div>
+            <div>Không tìm thấy dữ liệu</div>
           ) : (
             <ProductList />
           )}

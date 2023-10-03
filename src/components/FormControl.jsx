@@ -20,7 +20,20 @@ import { ErrorMessage } from "@hookform/error-message";
  * @returns {JSX.Element} - Form component.
  */
 
-const FormControl = ({ label, name, type, placeholder }) => {
+const FormControl = ({
+  as,
+  label,
+  id,
+  name,
+  type,
+  placeholder,
+  cols,
+  rows,
+  checked,
+  onChange,
+  defaultChecked,
+}) => {
+  let Tag = as === "textarea" ? "textarea" : "input";
   const {
     register,
     formState: { errors },
@@ -28,14 +41,20 @@ const FormControl = ({ label, name, type, placeholder }) => {
 
   return (
     <div className="main--account__form-group">
-      <label htmlFor={name} className="form-label">
+      <label htmlFor={id} className="form-label">
         {label}
       </label>
-      <input
+      <Tag
         name={name}
         type={type}
+        id={id}
         placeholder={placeholder}
         {...register(name)}
+        cols={cols}
+        rows={rows}
+        onChange={onChange}
+        checked={checked}
+        defaultChecked={defaultChecked}
       />
       <span className="form-message">
         <ErrorMessage errors={errors} name={name} />
@@ -45,10 +64,16 @@ const FormControl = ({ label, name, type, placeholder }) => {
 };
 
 FormControl.propTypes = {
+  as: PropTypes.string,
+  id: PropTypes.string,
+  cols: PropTypes.string,
+  rows: PropTypes.string,
+  checked: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default FormControl;

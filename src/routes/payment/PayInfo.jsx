@@ -4,8 +4,6 @@ import useAppContext from "../../hooks/useAppContext";
 const PayInfo = () => {
   const { productInCart, totalProductPrice } = useAppContext();
 
-  console.log(productInCart);
-
   return (
     <div className="section--pay__info l-4 m-4 c-12">
       <div className="section--pay__list">

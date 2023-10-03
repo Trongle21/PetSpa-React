@@ -5,6 +5,10 @@ import {
   DECREASE_PRODUCT,
   INCREASE_PRODUCT,
   DELETE_PRODUCT,
+  SELECTED_PET_TYPES,
+  SEARCH_PRODUCTS,
+  FILTER_PRODUCTS_BY_SEARCH,
+  SELECTED_PAY_METHOD,
 } from "./contain";
 
 const initState = {
@@ -12,17 +16,24 @@ const initState = {
   error: null,
   loading: true,
   productCart: [],
+  originalProducts: [],
+  selectedTypes: "",
+  inputSearch: "",
+  selectedPayMethod: [],
 };
 
 const reducer = (state, action) => {
   let exist;
   let newProduct;
   let products;
+  let listProduct;
+  let selectedMethod;
   switch (action.type) {
     case GET_DATA_SUCCESS:
       return {
         ...state,
         products: action.payload,
+        originalProducts: action.payload,
         loading: false,
       };
 
@@ -31,6 +42,38 @@ const reducer = (state, action) => {
         ...state,
         error: action.payload,
         loading: false,
+      };
+
+    case SELECTED_PET_TYPES:
+      if (action.payload === "cat and dog") {
+        listProduct = state.originalProducts;
+      } else if (action.payload === "cat") {
+        listProduct = state.originalProducts.filter((product) =>
+          product.type.includes("cat")
+        );
+      } else if (action.payload === "dog") {
+        listProduct = state.originalProducts.filter((product) =>
+          product.type.includes("dog")
+        );
+      }
+      return {
+        ...state,
+        products: listProduct,
+      };
+
+    case SEARCH_PRODUCTS:
+      return {
+        ...state,
+        inputSearch: action.payload,
+      };
+
+    case FILTER_PRODUCTS_BY_SEARCH:
+      listProduct = state.originalProducts.filter((product) =>
+        product.description.toLowerCase().includes(action.payload.toLowerCase())
+      );
+      return {
+        ...state,
+        products: listProduct,
       };
 
     case ADD_PRODUCT_TO_CART:
@@ -83,6 +126,14 @@ const reducer = (state, action) => {
         (product) => product.productId !== action.payload
       );
       return { ...state, productCart: products };
+
+    // case SELECTED_PAY_METHOD:
+    //   selectedMethod = action.payload;
+    //   if(selectedMethod.includes())
+    //   return {
+    //     ...state,
+    //     selectedPayMethod: selectPayMethod,
+    //   };
 
     default:
       throw new Error("Invalid action");

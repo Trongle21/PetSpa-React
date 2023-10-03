@@ -42,11 +42,26 @@ const AppProvider = ({ children }) => {
   const [isShowCart, setIsShowCart] = useState(false);
   const [isShowPackage, setIsShowPackage] = useState(false);
   const [isShowNavBar, setIsShowNavBar] = useState(false);
+  const [isShowSearch, setIsShowSearch] = useState(false);
 
   const [totalProductPrice, setTotalProductPrice] = useState(0);
   const [state, dispatch] = useProductContext();
-
   const { products } = state;
+
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const itemsPerPage = 8;
+
+  const endOffset = itemOffset + itemsPerPage;
+
+  const currentProducts = products.slice(itemOffset, endOffset);
+
+  const pageCount = Math.ceil(products.length / itemsPerPage);
+
+  const handlePageClick = (e) => {
+    const newOffset = (e.selected * itemsPerPage) % products.length;
+    setItemOffset(newOffset);
+  };
 
   useEffect(() => {
     function handleScroll() {
@@ -81,14 +96,12 @@ const AppProvider = ({ children }) => {
   };
 
   const handleShowNavBar = () => {
-    // const showNav = true;
     setIsShowNavBar(!isShowNavBar);
   };
 
-  // const handleCloseNavBar = () => {
-  //   const closeNav = false;
-  //   setIsShowNavBar(closeNav);
-  // };
+  const handleShowSearch = () => {
+    setIsShowSearch(!isShowSearch);
+  };
 
   const findProductById = (id) => {
     return products.find((product) => product.id === +id);
@@ -118,6 +131,10 @@ const AppProvider = ({ children }) => {
     );
   }, [productInCart]);
 
+  const handleTakeInfoUser = (data) => {
+    console.log(data);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -126,6 +143,7 @@ const AppProvider = ({ children }) => {
         isShowCart,
         isShowPackage,
         isShowNavBar,
+        isShowSearch,
         productInCart,
         lengthProductCart,
         totalProductPrice,
@@ -134,8 +152,13 @@ const AppProvider = ({ children }) => {
         onOpenCart: handleOpenCart,
         onCloseCart: handleCloseCart,
         onShowNavBar: handleShowNavBar,
+        onShowSearch: handleShowSearch,
         onAddProductToCart: handleAddProductToCart,
         onDeleteProduct: handleDeleteProduct,
+        onPageClick: handlePageClick,
+        onTakeInfoUser: handleTakeInfoUser,
+        currentProducts,
+        pageCount,
       }}
     >
       {children}

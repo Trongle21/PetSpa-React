@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { z } from "zod";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import FormControl from "../payment/FormControl";
-import { Link } from "react-router-dom";
+import FormControl from "../../components/FormControl";
+import PathLink from "../../components/PathLink";
 
 const contactForm = z.object({
   info: z.object({
@@ -32,6 +32,7 @@ const contactForm = z.object({
     boarding: z.boolean(),
     petSitting: z.boolean(),
     product: z.boolean(),
+    store: z.boolean(),
   }),
 });
 
@@ -45,7 +46,7 @@ const ContactSection = () => {
         first_name: "",
         last_name: "",
         email: "",
-        phone_number: null,
+        phone_number: "",
         subject: "",
         message: "",
         dogWalking: false,
@@ -53,6 +54,7 @@ const ContactSection = () => {
         grooming: false,
         boarding: false,
         product: false,
+        store: false,
       },
     },
   });
@@ -64,11 +66,7 @@ const ContactSection = () => {
   return (
     <section className="section--contact__form">
       <div className="container">
-        <div className="path--link">
-          <a href="index.html">Home</a>
-          <i className="fa-solid fa-chevron-right"></i>
-          <h6>Contact</h6>
-        </div>
+        <PathLink content="Contact" />
         <div className="line"></div>
         <h2>How can we help?</h2>
         <FormProvider {...methods}>
@@ -114,7 +112,7 @@ const ContactSection = () => {
               </div>
               <div className="contact--form__list l-6 m-6 c-12">
                 <div className="contact--form__list--wrapper">
-                  <label htmlFor="location" className="form-label">
+                  <label htmlFor="location" className="form-label location">
                     Location
                   </label>
                   <select
@@ -147,7 +145,7 @@ const ContactSection = () => {
                     <FormControl
                       name="info.dogWalking"
                       type="checkbox"
-                      label="dogWalking"
+                      label="Dog Walking"
                     />
                   </div>
                 </div>
@@ -156,7 +154,7 @@ const ContactSection = () => {
                     <FormControl
                       name="info.grooming"
                       type="checkbox"
-                      label="grooming"
+                      label="Grooming"
                     />
                   </div>
                 </div>
@@ -165,7 +163,7 @@ const ContactSection = () => {
                     <FormControl
                       name="info.boarding"
                       type="checkbox"
-                      label="boarding"
+                      label="Boarding"
                     />
                   </div>
                 </div>
@@ -174,7 +172,7 @@ const ContactSection = () => {
                     <FormControl
                       name="info.petSitting"
                       type="checkbox"
-                      label="petSitting"
+                      label="Pet Sitting"
                     />
                   </div>
                 </div>
@@ -183,24 +181,29 @@ const ContactSection = () => {
                     <FormControl
                       name="info.product"
                       type="checkbox"
-                      label="product"
+                      label="Products"
                     />
                   </div>
                 </div>
                 <div className="contact--form__checkbox--list l-6 m-4 c-12">
                   <div className="checkbox--form">
-                    <FormControl name="store" type="checkbox" label="store" />
+                    <FormControl
+                      name="info.store"
+                      type="checkbox"
+                      label="Store"
+                    />
                   </div>
                 </div>
                 <div className="contact--form__message">
                   <label htmlFor="message">Message</label>
-                  <textarea
+                  <FormControl
+                    as="textarea"
                     name="info.message"
                     id="message"
                     cols="30"
                     rows="10"
                     placeholder="Example text"
-                  ></textarea>
+                  />
                 </div>
               </div>
             </div>

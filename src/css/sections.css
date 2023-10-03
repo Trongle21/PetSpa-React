@@ -3,7 +3,18 @@
 /* Header*/
 
 .loader {
-  background: #f4b558 url(/src/image/loader.gif) no-repeat center center;
+  background: #f4b558 url(https://i.ibb.co/Kw8mcYC/loader.gif) no-repeat center
+    center;
+  background-size: 15%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 111111;
+}
+
+.react-loading-skeleton {
+  background: #f4b558 url(https://i.ibb.co/Kw8mcYC/loader.gif) no-repeat center
+    center;
   background-size: 15%;
   width: 100vw;
   height: 100vh;
@@ -1284,16 +1295,18 @@ input[type="checkbox"]:checked {
   gap: 1rem;
   margin-bottom: 8.6rem;
 }
-
-.pagination--item {
+.pagination--product ul .previous a,
+.pagination--product ul .next a,
+.pagination--item__link {
   font-size: 2rem;
   border: 1px solid transparent;
   transition: all var(--animated-fast);
-  width: 4rem;
-  height: 4rem;
+  padding: 1rem 1.2rem;
   cursor: pointer;
   text-align: center;
-  line-height: 4rem;
+  gap: 1px;
+  line-height: 2rem;
+  display: block;
 }
 
 .pagination--item.active {
@@ -1302,16 +1315,11 @@ input[type="checkbox"]:checked {
   color: #fff;
 }
 
-.pagination--item:hover {
-  border: 1px solid transparent;
+.pagination--item:hover,
+.pagination--product ul .previous:hover,
+.pagination--product ul .next:hover {
   background-color: var(--color-primary);
   color: #fff;
-}
-
-.pagination--item__link i {
-  line-height: 4rem;
-  color: var(--color-primary);
-  font-size: 2.4rem;
 }
 
 .pagination--item:hover i {
@@ -1544,6 +1552,10 @@ input[type="checkbox"]:checked {
   font-weight: 700;
 }
 
+.form-label.location {
+  font-size: 2rem;
+}
+
 .sign--up__form + .sign--up__form {
   margin-top: 2rem;
 }
@@ -1707,21 +1719,47 @@ input[type="checkbox"]:checked {
   border-color: var(--color-primary);
 }
 
-.payment {
+.payment.checkbox {
   transition: all var(--animated-slow);
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  padding-left:1rem ;
+}
+
+.payment.checkbox .main--account__form-group {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+}
+
+.payment.checkbox .main--account__form-group label,
+.payment.checkbox .main--account__form-group input {
+  cursor: pointer;
+}
+
+.payment.checkbox .main--account__form-group label {
+  width: 100%;
+  padding: 1rem ;
+}
+
+.payment.checkbox .main--account__form-group input {
+  padding: 1rem !important;
 }
 
 .payment:hover {
   background-color: var(--color-primary);
+  color: #fff;
 }
 
 .payment--btn {
-  padding-top: 2rem;
-  width: 100%;
+  text-align: center;
+  padding: 4.6rem 1rem;
 }
 
 .payment--btn button {
-  width: 100%;
+  width: 30%;
 }
 
 .payment--methods__wrapper {
@@ -1729,14 +1767,6 @@ input[type="checkbox"]:checked {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-}
-
-.payment--methods__wrapper :hover {
-  background-color: #fff;
-}
-
-.payment--methods__wrapper input:hover {
-  background-color: var(--color-primary);
 }
 
 .payment--methods h3 {
@@ -1755,17 +1785,6 @@ input[type="checkbox"]:checked {
 
 .section--pay__info__wrapper .line {
   border-color: #000 !important;
-}
-
-.payment {
-  border: 1px solid #e3e3e3;
-  padding: 1.2rem;
-  font-size: 2rem;
-  width: 100%;
-}
-
-.payment label {
-  padding-left: 1rem;
 }
 
 .payment.bank--transfer {
@@ -2070,10 +2089,6 @@ input[type="checkbox"]:checked {
   border: 1px solid var(--color-primary);
 }
 
-.contact--form__list--wrapper label {
-  padding-bottom: 0.4rem;
-}
-
 .contact--form__list--wrapper input {
   padding: 1rem;
   border: 1px solid #e3e3e3;
@@ -2128,7 +2143,7 @@ input[type="checkbox"]:checked {
 }
 
 .contact--form__message label {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
