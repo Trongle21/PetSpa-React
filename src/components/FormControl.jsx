@@ -65,6 +65,7 @@ const FormControl = ({
 
 FormControl.propTypes = {
   as: PropTypes.string,
+  defaultChecked: PropTypes.node,
   id: PropTypes.string,
   cols: PropTypes.string,
   rows: PropTypes.string,

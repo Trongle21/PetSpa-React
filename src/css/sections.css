@@ -861,19 +861,34 @@ input[type="checkbox"]:checked {
   color: var(--color-primary);
 }
 
-/* .service--section__page--wrapper_pc {
-  justify-content: end !important;
-} */
-
 .service--image img {
   width: 16rem;
   padding-left: 1rem;
+}
+
+.service--image__mb img {
+  display: none;
 }
 
 .service--title {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.service--mb__icon {
+  display: none;
+}
+
+.service--mb__icon i {
+  transition: all var(--animated-slow);
+}
+.service--mb__icon i.rotate {
+  transform: rotate(45deg);
+}
+
+.service--mb {
+  padding-right: 0.6rem;
 }
 
 .service--title h6 {
@@ -956,8 +971,18 @@ input[type="checkbox"]:checked {
 
 .service--book_btn {
   padding-top: 4rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
+.service--book_btn div {
+  width: fit-content;
+}
+
+.service--book_btn  button {
+  margin-left: 1rem;
+}
+
 
 .service--book_btn h5 {
   font-size: 1.6rem;
@@ -1724,7 +1749,7 @@ input[type="checkbox"]:checked {
   cursor: pointer;
   width: 100%;
   border: 1px solid #e3e3e3;
-  padding-left:1rem ;
+  padding-left: 1rem;
 }
 
 .payment.checkbox .main--account__form-group {
@@ -1741,7 +1766,7 @@ input[type="checkbox"]:checked {
 
 .payment.checkbox .main--account__form-group label {
   width: 100%;
-  padding: 1rem ;
+  padding: 1rem;
 }
 
 .payment.checkbox .main--account__form-group input {

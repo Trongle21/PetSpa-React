@@ -43,6 +43,7 @@ const AppProvider = ({ children }) => {
   const [isShowPackage, setIsShowPackage] = useState(false);
   const [isShowNavBar, setIsShowNavBar] = useState(false);
   const [isShowSearch, setIsShowSearch] = useState(false);
+  const [isShowServiceBook, setIsShowServiceBook] = useState(false);
 
   const [totalProductPrice, setTotalProductPrice] = useState(0);
   const [state, dispatch] = useProductContext();
@@ -103,6 +104,10 @@ const AppProvider = ({ children }) => {
     setIsShowSearch(!isShowSearch);
   };
 
+  const handleShowServiceBook = () => {
+    setIsShowServiceBook(!isShowServiceBook);
+  };
+
   const findProductById = (id) => {
     return products.find((product) => product.id === +id);
   };
@@ -110,7 +115,6 @@ const AppProvider = ({ children }) => {
   const handleAddProductToCart = ({ productId, quantity = 1 }) => {
     dispatch(actions.addProductToCart(productId, quantity));
   };
-
   const productInCart = state.productCart.map((product) => ({
     product: findProductById(product.productId),
     quantity: product.quantity,
@@ -145,6 +149,7 @@ const AppProvider = ({ children }) => {
         isShowNavBar,
         isShowSearch,
         productInCart,
+        isShowServiceBook,
         lengthProductCart,
         totalProductPrice,
         findProductById,
@@ -153,6 +158,7 @@ const AppProvider = ({ children }) => {
         onCloseCart: handleCloseCart,
         onShowNavBar: handleShowNavBar,
         onShowSearch: handleShowSearch,
+        onShowServiceBook: handleShowServiceBook,
         onAddProductToCart: handleAddProductToCart,
         onDeleteProduct: handleDeleteProduct,
         onPageClick: handlePageClick,

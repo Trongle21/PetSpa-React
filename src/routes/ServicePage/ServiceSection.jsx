@@ -10,7 +10,7 @@ const ServiceSection = () => {
         <PathLink content="Service" />
         <div className="line" />
         <ServicePackage />
-        <ServicePackageMb />
+        {/* <ServicePackageMb /> */}
       </div>
     </section>
   );

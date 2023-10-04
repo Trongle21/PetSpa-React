@@ -6,7 +6,7 @@ import ServiceBoarding from "./ServiceBoarding";
 import ServicePetSitting from "./ServicePetSitting";
 
 const ServicePackage = () => {
-  const [choosePackage, setChoosePackage] = useState(0);
+  // const [choosePackage, setChoosePackage] = useState(0);
 
   const handleChoosePackage = (id) => {
     const offset = document.querySelector(`.${id}`).offsetTop - 120;

@@ -11,6 +11,7 @@ import SignUp from "./routes/SignUp";
 import { AppProvider, ProductProvider } from "./store/Provider";
 import DetailProduct from "./routes/DetailProduct/DetailProduct";
 import Payment from "./routes/payment/Payment";
+import ServiceBook from "./routes/ServicePage/ServiceBook";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,7 @@ function App() {
       children: [
         { path: "", element: <Home /> },
         { path: "/service", element: <Service /> },
+        { path: "/serviceBook", element: <ServiceBook /> },
         { path: "/product", element: <Product /> },
         { path: "/product/:productId", element: <DetailProduct /> },
         { path: "/payment", element: <Payment /> },
