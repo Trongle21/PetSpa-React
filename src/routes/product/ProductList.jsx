@@ -3,7 +3,6 @@ import useAppContext from "../../hooks/useAppContext";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import useProductContext from "../../hooks/useProductContext";
-import LazyLoad from "react-lazyload";
 
 const ProductList = () => {
   const [state, dispatch] = useProductContext();
