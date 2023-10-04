@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../../data.json";
 import useAppContext from "../../hooks/useAppContext";
-import LazyLoad from "react-lazyload";
 
 const ServicePrice = () => {
   const [hoverPackage, setHoverPackage] = useState(1);
