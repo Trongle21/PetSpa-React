@@ -4,7 +4,7 @@ import Button from "../Button";
 const HeaderSignIn = () => {
   return (
     <div className="header--sign-in">
-      <Button className="btn btn--primary" content="Sign In" />
+      <Button className="btn btn--primary" content="Đăng nhập" />
     </div>
   );
 };

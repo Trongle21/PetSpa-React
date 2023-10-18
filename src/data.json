@@ -1,47 +1,47 @@
 {
   "navigation": [
     {
-      "name": "Home",
+      "name": "Trang chủ",
       "url": "/"
     },
     {
-      "name": "Service",
+      "name": "Dịch vụ",
       "url": "/service"
     },
     {
-      "name": "Product",
+      "name": "Sản phẩm",
       "url": "/product"
     },
     {
-      "name": "About",
+      "name": "Về chúng tôi",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Liên lạc",
       "url": "/contact"
     }
   ],
   "footerInfoSp": [
     {
-      "name": "Contact Us",
+      "name": "Liên lạc",
       "url": "contact.html"
     },
     {
-      "name": "Service",
+      "name": "Dịch vụ",
       "url": "service.html"
     },
     {
-      "name": "Product",
+      "name": "Sản phẩm",
       "url": "product.html"
     },
     {
-      "name": "Signup",
+      "name": "Đăng nhập",
       "url": "signup.html"
     }
   ],
   "footerInfoAbout": [
     {
-      "name": "About Us",
+      "name": "Về chúng tôi",
       "url": "about.html"
     },
     {
@@ -76,103 +76,104 @@
   ],
   "homeHero": [
     {
-      "name": "Your pet is part of our family",
-      "description": "Let us treat your pet like our own family with best service and special package",
+      "name": "Thú cưng của bạn là một phần của gia đình chúng tôi",
+      "description": "Hãy để chúng tôi đối xử với thú cưng của bạn như gia đình của chúng tôi với dịch vụ tốt nhất và gói đặc biệt",
       "image": "https://i.ibb.co/wK82T7m/hero-bg-1.jpg",
       "button": "btn btn--primary"
     },
     {
-      "name": "Your pet is part of our family",
-      "description": "Let us treat your pet like our own family with best service and special package",
+      "name": "Thú cưng của bạn là một phần của gia đình chúng tôi",
+      "description": "Hãy để chúng tôi đối xử với thú cưng của bạn như gia đình của chúng tôi với dịch vụ tốt nhất và gói đặc biệt",
       "image": "https://i.ibb.co/Gv3cg61/hero-bg-2.jpg",
       "button": "btn btn--primary"
     },
     {
-      "name": "Your pet is part of our family",
-      "description": "Let us treat your pet like our own family with best service and special package",
+      "name": "Thú cưng của bạn là một phần của gia đình chúng tôi",
+      "description": "Hãy để chúng tôi đối xử với thú cưng của bạn như gia đình của chúng tôi với dịch vụ tốt nhất và gói đặc biệt",
       "image": "https://i.ibb.co/M6XgBtz/hero-bg-3.jpg",
       "button": "btn btn--primary"
     },
     {
-      "name": "Your pet is part of our family",
-      "description": "Let us treat your pet like our own family with best service and special package",
+      "name": "Thú cưng của bạn là một phần của gia đình chúng tôi",
+      "description": "Hãy để chúng tôi đối xử với thú cưng của bạn như gia đình của chúng tôi với dịch vụ tốt nhất và gói đặc biệt",
       "image": "https://i.ibb.co/zNtPfvB/hero-bg-4.jpg",
       "button": "btn btn--primary"
     },
     {
-      "name": "Your pet is part of our family",
-      "description": "Let us treat your pet like our own family with best service and special package",
+      "name": "Thú cưng của bạn là một phần của gia đình chúng tôi",
+      "description": "Hãy để chúng tôi đối xử với thú cưng của bạn như gia đình của chúng tôi với dịch vụ tốt nhất và gói đặc biệt",
       "image": "https://i.ibb.co/ZgZfQyY/hero-bg-5.jpg",
       "button": "btn btn--primary"
     },
     {
-      "name": "Your pet is part of our family",
-      "description": "Let us treat your pet like our own family with best service and special package",
+      "name": "Thú cưng của bạn là một phần của gia đình chúng tôi",
+      "description": "Hãy để chúng tôi đối xử với thú cưng của bạn như gia đình của chúng tôi với dịch vụ tốt nhất và gói đặc biệt",
       "image": "https://i.ibb.co/Swvkkn2/hero-bg-6.jpg",
       "button": "btn btn--primary"
     }
   ],
   "homeService": [
     {
-      "name": "Service",
-      "description": "Vaccination are carried oit to keep pets in excellent condition",
+      "name": "Dịch vụ",
+      "description": "Tiêm phòng được thực hiện để giữ vật nuôi trong tình trạng tốt",
       "image": "https://i.ibb.co/54FGPQm/service-Vaccination.png",
       "href": "/service"
     },
     {
-      "name": "Product",
-      "description": "Tidy up, full body wash to keep them stay clean",
+      "name": "Sản phẩm",
+      "description": "Dọn dẹp, tắm rửa toàn thân để giữ cơ thể luôn sạch sẽ",
       "image": "https://i.ibb.co/QMjKtn5/service-teth-cleaning.jpg",
       "href": "/product"
     },
     {
-      "name": "About",
-      "description": "General cart to keep your pet healthy as always",
+      "name": "Về chúng tôi",
+      "description": "Xe đẩy chung để giữ cho thú cưng của bạn luôn khỏe mạnh",
       "image": "https://i.ibb.co/gyTKSVc/service-bath-tub.png",
       "href": "/about"
     },
     {
-      "name": "Contact",
-      "description": "Continuous control should be made for gum care",
+      "name": "Liên lạc",
+      "description": "Cần kiểm soát liên tục việc chăm sóc nướu",
       "image": "https://i.ibb.co/31zF81y/service-veterinarian.png",
       "href": "/contact"
     }
   ],
   "homePackage": [
     {
-      "name": "Frendly Pack",
+      "name": "Gói thân thiện",
       "price": 100,
       "image": "https://i.ibb.co/zH6QSDH/service-price-1.jpg",
       "packages": [
-        "5 Day service",
-        "Dog Walking",
-        "Grooming",
-        "Boarding",
-        "Pet Sitting"
+        "Dịch vụ 5 ngày",
+        "Dắt pet đi dạo",
+        "chải chuốt",
+        "Nội trú",
+        "Huấn luyện"
       ]
     },
     {
-      "name": "Recommend pack",
+      "name": "Gói đề xuất",
       "price": 175,
       "image": "https://i.ibb.co/rvj5HhS/service-price-2.jpg",
       "packages": [
-        "15 Day service",
-        "Dog Walking",
-        "Grooming",
-        "Boarding",
-        "Pet Sitting"
+        "Dịch vụ 15 ngày",
+        "Dắt pet đi dạo",
+        "chải chuốt",
+        "Nội trú",
+        "Huấn luyện"
+    
       ]
     },
     {
-      "name": "Premium  Pack",
+      "name": "Gói đặc biệt",
       "price": 200,
       "image": "https://i.ibb.co/vcKJ4X4/service-price-3.jpg",
       "packages": [
-        "30 Day service",
-        "Dog Walking",
-        "Grooming",
-        "Boarding",
-        "Pet Sitting"
+        "Dịch vụ 30 ngày",
+        "Dắt pet đi dạo",
+        "chải chuốt",
+        "Nội trú",
+        "Huấn luyện"
       ]
     }
   ],
@@ -181,8 +182,8 @@
       "image": "https://i.ibb.co/28N1d0V/staff-1.jpg",
       "info": [
         {
-          "name": "Ariana Grande",
-          "job": "Veterinarian",
+          "name": "Lê Thị Dung",
+          "job": "bác sĩ vaccine",
           "social": [
             "fa-brands fa-square-facebook",
             "fa-brands fa-square-youtube",
@@ -196,8 +197,8 @@
       "image": "https://i.ibb.co/tzD7gPc/staff-2.jpg",
       "info": [
         {
-          "name": "The Weeknd",
-          "job": "Doctor",
+          "name": "Nguyễn Đăng Khoa",
+          "job": "Bác sĩ thú y",
           "social": [
             "fa-brands fa-square-facebook",
             "fa-brands fa-square-youtube",
@@ -211,8 +212,8 @@
       "image": "https://i.ibb.co/3yX1J1L/staff-3.png",
       "info": [
         {
-          "name": "Adele",
-          "job": "Pet Bather",
+          "name": "Nguyễn Thị Hoa",
+          "job": "Nhân viên tắm thú cưng",
           "social": [
             "fa-brands fa-square-facebook",
             "fa-brands fa-square-youtube",
@@ -226,8 +227,8 @@
       "image": "https://i.ibb.co/6NcRdqh/staff-4.png",
       "info": [
         {
-          "name": "G-Dragon",
-          "job": "Pet Training",
+          "name": "Đào Văn Tùng",
+          "job": "Huấn luyện thú cưng",
           "social": [
             "fa-brands fa-square-facebook",
             "fa-brands fa-square-youtube",
@@ -242,47 +243,47 @@
   "data_service": [
     {
       "id": "service-1",
-      "name": "Dog Walking"
+      "name": "Đi dạo"
     },
     {
       "id": "service-2",
-      "name": "Grooming"
+      "name": "Tắm rửa"
     },
     {
       "id": "service-3",
-      "name": "Boarding"
+      "name": "Ngủ qua đêm"
     },
     {
       "id": "service-4",
-      "name": "Pet Sitting"
+      "name": "Huấn luyện"
     }
   ],
   "dog_walking": {
     "30 minus": [
       {
-        "name": "10 Walk Pack",
+        "name": "Gói 10 lần",
         "price": 285
       },
       {
-        "name": "20 Walk Pack",
+        "name": "Gói 20 lần",
         "price": 540
       },
       {
-        "name": "50 Walk Pack",
+        "name": "Gói 50 lần",
         "price": 1020
       }
     ],
     "60 minus": [
       {
-        "name": "10 Walk Pack",
+        "name": "Gói 10 lần",
         "price": 475
       },
       {
-        "name": "20 Walk Pack",
+        "name": "Gói 20 lần",
         "price": 900
       },
       {
-        "name": "50 Walk Pack",
+        "name": "Gói 50 lần",
         "price": 1700
       }
     ]
@@ -290,90 +291,90 @@
   "grooming": {
     "luxuryBath": [
       {
-        "name": "Bath & blow dry"
+        "name": "Tắm và sấy khô"
       },
       {
-        "name": "Ear cleaning"
+        "name": "Làm sạch tai"
       },
       {
-        "name": "Nail trim"
+        "name": "Cắt móng"
       },
       {
-        "name": "Paw pad trim"
+        "name": "Tỉa lông"
       },
       {
-        "name": "Blueberry facial"
+        "name": "Mát xa"
       }
     ],
     "fullGroom": [
       {
-        "name": "Hair cut & style"
+        "name": "Cắt tóc và tạo kiểu"
       },
       {
-        "name": "Bath & blow dry"
+        "name": "Tắm và sấy khô"
       },
       {
-        "name": "Ear cleaning"
+        "name": "Làm sạch tai"
       },
       {
-        "name": "Nail trim"
+        "name": "Cắt móng"
       },
       {
-        "name": "Paw pad trim"
+        "name": "Tỉa lông"
       },
       {
-        "name": "Sanitary trim"
+        "name": "Mát xa"
       }
     ]
   },
   "boarding": [
     {
-      "name": "Bath & blow dry",
+      "name": "Tắm và sấy khô",
       "price": 100,
-      "time": "Night"
+      "time": "Tối"
     },
     {
-      "name": "Ear cleaning",
+      "name": "Làm sạch tai",
       "price": 95,
-      "time": "Night"
+      "time": "Tối"
     },
     {
-      "name": "Nail trim",
+      "name": "Cắt móng",
       "price": 90,
-      "time": "Night"
+      "time": "Tối"
     }
   ],
   "petSitting": [
     {
-      "name": "Cat Visit",
+      "name": "Gói mèo",
       "price": 40
     },
     {
-      "name": "Puppy Visit",
+      "name": "Gói chó",
       "price": 40
     }
   ],
   "principles": [
     {
-      "name": "Excellence",
-      "description": "Be the best while doing our best, both in our personal lives and as a company"
+      "name": "Xuất sắc",
+      "description": "Trở thành người giỏi nhất trong khi nỗ lực hết mình, cả trong cuộc sống cá nhân và với tư cách là một công ty"
     },
     {
-      "name": "Integrity",
-      "description": "The foundation of trust and the fabric of all meaningful relationships – not only with our clients and the pets who rely on us, but also with our team, who we rely on every day"
+      "name": "Chính trực",
+      "description": "Nền tảng của niềm tin và nền tảng của mọi mối quan hệ có ý nghĩa – không chỉ với khách hàng và thú cưng, những người tin cậy vào chúng tôi, mà còn với đội ngũ của chúng tôi, những người mà chúng tôi tin tưởng mỗi ngày"
     },
     {
-      "name": "Passion",
-      "description": "For what we do, and the pets we do it for – otherwise why do it?"
+      "name": "Niềm đam mê",
+      "description": "Vì những gì chúng ta làm và vì thú cưng mà chúng ta làm điều đó - nếu không thì tại sao lại làm vậy?"
     },
     {
-      "name": "Hospitality",
-      "description": "How we welcome others into our family – with open arms, courtesy, kindness and a sense of belonging"
+      "name": "Lòng hiếu khách",
+      "description": "Cách chúng ta chào đón những người khác vào gia đình mình – với vòng tay rộng mở, lịch sự, tử tế và cảm giác thân thuộc"
     }
   ],
   "selectedPetTypes": [
     {
-      "name": "Cat and Dog",
+      "name": "Cat và Dpg",
       "value": "cat and dog"
     },
     {
@@ -387,11 +388,11 @@
   ],
   "paymentMethods": [
     {
-      "name": "Bank transfer",
+      "name": "Chuyển khoản",
       "value": "bank"
     },
     {
-      "name": "Delivery",
+      "name": "Vận chuyển",
       "value": "delivery"
     }
   ]

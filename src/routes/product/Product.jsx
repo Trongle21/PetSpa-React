@@ -11,10 +11,8 @@ const Product = () => {
     <main>
       <HeroSection
         backgroundImg="https://i.ibb.co/njr1t1X/product-bg-1.jpg"
-        content="We enjoy our work"
-        des="  It is an excellent option for kenneling your pet, different turnout
-            times for potty and play, and not to mention all of this stress is
-            in addition to not having you around"
+        content="Chúng tôi tận hưởng công việc của chúng tôi"
+        des="Đây là một lựa chọn tuyệt vời để nhốt thú cưng của bạn vào chuồng,thời gian để đi vệ sinh và vui chơi"
       />
       <ProductSection />
       <div className="pagination--product">

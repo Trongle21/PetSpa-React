@@ -6,7 +6,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import FormControl from "../../components/FormControl";
 import useAppContext from "../../hooks/useAppContext";
-import { data } from "jquery";
+import { Link } from "react-router-dom";
 
 const contactForm = z.object({
   info: z.object({
@@ -33,9 +33,9 @@ const contactForm = z.object({
 
 const SectionPay = () => {
   const [chooseCountry, setChooseCountry] = useState("Viet Nam");
-  const [choosePayment, setChoosePayment] = useState("bank transfer");
+  const [choosePayment, setChoosePayment] = useState("Bank transfer");
 
-  const { onTakeInfoUser } = useAppContext();
+  const { onTakeInfoUser, form } = useAppContext();
 
   const methods = useForm({
     resolver: zodResolver(contactForm),
@@ -123,15 +123,15 @@ const SectionPay = () => {
 
               <div className="payment--methods l-4 m-4 c-12">
                 <div className="payment--methods__wrapper">
-                  <h3>Payment methods</h3>
+                  <h3>Phương thức thanh toán</h3>
                   <div className="payment checkbox">
                     <FormControl
                       label="Bank Transfer"
                       id="bank transfer"
                       type="radio"
                       name="info.paymentMethod"
-                      onChange={() => handleCheckboxChange("bank transfer")}
-                      checked={choosePayment === "bank transfer"}
+                      onChange={() => handleCheckboxChange("Bank transfer")}
+                      checked={choosePayment === "Bank transfer"}
                     />
                   </div>
                   <div className="payment checkbox">
@@ -140,8 +140,8 @@ const SectionPay = () => {
                       id="delivery"
                       type="radio"
                       name="info.paymentMethod"
-                      onChange={() => handleCheckboxChange("delivery")}
-                      checked={choosePayment === "delivery"}
+                      onChange={() => handleCheckboxChange("Delivery")}
+                      checked={choosePayment === "Delivery"}
                     />
                   </div>
                 </div>
@@ -151,7 +151,7 @@ const SectionPay = () => {
             </div>
             <div className="payment--btn">
               <button type="submit" className="btn btn--primary">
-                Pay now
+                {form ? <Link to="/paymentSuccess">Mua ngay</Link> : "Pay Now"}
               </button>
             </div>
           </form>

@@ -11,23 +11,23 @@ const AboutSection = () => {
         <div className="about--section__wrapper">
           <div className="about--section__history row">
             <div className="about--section__history--info l-4 m-12 c-12">
-              <h3 className="about--title">Our Story</h3>
+              <h3 className="about--title">Câu chuyện của chúng ta</h3>
               <h6>
-                In 2008, founders Mike and Adam—fresh off Wall Street—launched
-                Throw Me A Bone with the idea of creating a more personalized,
-                convenient and accessible pet-care service in New York City.
-                What began as a small but thriving dog-walking business on the
-                Upper East Side quickly became a 10-person operation within two
-                years. By 2011, Throw Me A Bone expanded beyond dog walking to
-                offer pet sitting (for cats, too!), grooming and dog training,
-                providing in-home services across much of Manhattan. In 2017, we
-                opened our first full-service pet care facility in Midtown West
-                complete with a pet spa, playroom, and dog run. Today, we are
-                operating 7 facility locations with a team of over 35 dedicated
-                Pet Care Specialists who provide over 200 services a day across
-                Manhattan, Brooklyn, and Queens. High quality, comprehensive pet
-                care has never been more accessible, and we are proud to be a
-                leader in enhancing the lives of New York City is pets.
+                 Năm 2008, hai nhà sáng lập Mike và Adam—mới ở Phố Wall—đã ra mắt
+                 Throw Me A Bone với ý tưởng tạo ra một sản phẩm được cá nhân hóa hơn,
+                 dịch vụ chăm sóc thú cưng thuận tiện và dễ tiếp cận tại Thành phố New York.
+                 Bắt đầu là một doanh nghiệp dắt chó đi dạo nhỏ nhưng phát đạt trên
+                 Upper East Side nhanh chóng trở thành cơ sở hoạt động gồm 10 người trong vòng hai
+                 năm. Đến năm 2011, Throw Me A Bone mở rộng ra ngoài việc dắt chó đi dạo đến
+                 cung cấp dịch vụ chăm sóc thú cưng (cho cả mèo nữa!), chải lông và huấn luyện chó,
+                 cung cấp dịch vụ tại nhà trên khắp Manhattan. Năm 2017, chúng tôi
+                 đã mở cơ sở chăm sóc thú cưng đầy đủ dịch vụ đầu tiên ở Midtown West
+                 hoàn chỉnh với spa dành cho thú cưng, phòng chơi và nơi chạy chó. Hôm nay chúng ta
+                 vận hành 7 địa điểm cơ sở với đội ngũ trên 35 người tận tâm
+                 Các chuyên gia chăm sóc thú cưng cung cấp hơn 200 dịch vụ mỗi ngày trên khắp
+                 Manhattan, Brooklyn và Nữ hoàng. Thú cưng toàn diện, chất lượng cao
+                 việc chăm sóc chưa bao giờ dễ tiếp cận hơn thế và chúng tôi tự hào là một
+                 dẫn đầu trong việc nâng cao cuộc sống của thành phố New York là thú cưng.
               </h6>
             </div>
             <div className="about--section__picture l-7 m-12 c-12">
@@ -43,9 +43,9 @@ const AboutSection = () => {
             <div className="about--section__mission--info text-center">
               <h3 className="about--title">Our Mission</h3>
               <h6>
-                To enrich the lives of each and every pet in our care while
-                delivering value, convenience, and peace of mind to their
-                owners.
+                 Để làm phong phú thêm cuộc sống của mỗi thú cưng trong sự chăm sóc của chúng tôi trong khi
+                 mang lại giá trị, sự thuận tiện và sự yên tâm cho họ
+                 những chủ sở hữu.
               </h6>
             </div>
           </div>
@@ -59,7 +59,7 @@ const AboutSection = () => {
               ></div>
             </div>
             <div className="about--section__principles--info l-4 m-12 c-12">
-              <h3 className="about--title">Our Guiding Principles</h3>
+              <h3 className="about--title">Nguyên tắc chỉ đạo của chúng tôi</h3>
               <div className="principles-list">
                 {data["principles"].map((principle, index) => (
                   <div className="principles-list__name" key={index}>

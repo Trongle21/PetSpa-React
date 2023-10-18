@@ -7,10 +7,10 @@ const ServiceSection = () => {
   return (
     <section className="service--section container-padding">
       <div className="container">
-        <h4 className="heading-lg text-center fw-800">What Can We Do</h4>
+        <h4 className="heading-lg text-center fw-800">Chúng ta có thể làm gì</h4>
         <h2 className="heading-sm text-center margin-bottom">
-          We lock after little your family, we ensure that we will give the best
-          treat for your little family
+        Chúng tôi chăm chút cho gia đình bạn, chúng tôi đảm bảo rằng chúng tôi sẽ mang đến những điều tốt nhất
+        chiêu đãi gia đình nhỏ của bạn
         </h2>
         <div className="service--section__list padding-bottom row">
           {homeService.map((service, index) => (

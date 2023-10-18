@@ -14,13 +14,13 @@ const DetailProduct = () => {
     <main>
       <HeroSection
         backgroundImg="https://i.ibb.co/kmKngmQ/detail-product-bg-1.jpg"
-        content="Adopt a cat, save the world"
-        des="For your furry or flying or finned friends."
+        content="Nhận nuôi một chú mèo, cứu thế giới"
+        des="Dành cho những người bạn lông xù, biết bay hoặc bị phạt của bạn."
       />
       {loading ? (
-        <div>Loading</div>
+        <div>Đang load</div>
       ) : error ? (
-        <div>Error</div>
+        <div>Có lỗi</div>
       ) : (
         <SectionDetail />
       )}

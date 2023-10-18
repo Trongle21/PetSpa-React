@@ -9,12 +9,12 @@ const About = () => {
     <main>
       <HeroSection
         backgroundImg="https://i.ibb.co/84kM03L/about-bg-1.jpg"
-        content="You can count on us"
-        des="Pet sitting is a cost-effective way to comfort the least amount of stress on your animal by allowing your pet to maintain as much of its daily routine as possible"
+        content="Bạn có thể tin ở chúng tôi"
+        des="Chăm sóc thú cưng là một cách tiết kiệm chi phí để xoa dịu ít căng thẳng nhất cho động vật của bạn bằng cách cho phép thú cưng của bạn duy trì nhiều thói quen hàng ngày nhất có thể"
       />
       <AboutSection />
-      <CartIcon />
       <Cart />
+      <CartIcon />
     </main>
   );
 };

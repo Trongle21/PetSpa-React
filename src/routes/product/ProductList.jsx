@@ -50,7 +50,7 @@ const ProductList = () => {
                     handleAddProductToCart(product.id);
                     handleShowCart();
                   }}
-                  content="Add To Cart"
+                  content="Thêm vào giỏ hàng"
                 />
               </div>
             </div>

@@ -46,7 +46,7 @@ const filterProductsBySearch = (payload) => {
   };
 };
 
-const addProductToCart = (productId, quantity = 1) => {
+  const addProductToCart = (productId, quantity = 1) => {
   return {
     type: ADD_PRODUCT_TO_CART,
     payload: {

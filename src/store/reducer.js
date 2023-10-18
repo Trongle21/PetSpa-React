@@ -96,6 +96,7 @@ const reducer = (state, action) => {
           productCart: [...state.productCart, action.payload],
         };
       }
+      
     case DECREASE_PRODUCT:
       newProduct = state.productCart.map((product) => {
         if (product.productId === action.payload) {

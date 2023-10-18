@@ -23,7 +23,7 @@ const ProductSection = () => {
           {!isShowCart && <CartIcon />}
           <ProductInfo />
           {loading ? (
-            <div>Loading ...</div>
+            <div>Đang load ...</div>
           ) : error ? (
             <div>Không tìm thấy dữ liệu</div>
           ) : (

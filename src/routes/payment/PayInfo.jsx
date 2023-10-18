@@ -26,7 +26,7 @@ const PayInfo = () => {
         ))}
       </div>
       <div className="section--pay__info--total">
-        <h5>Total</h5>
+        <h5>Tổng giá</h5>
         <h4>
           <span>$</span>
           <p>{totalProductPrice}</p>

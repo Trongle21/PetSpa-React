@@ -6,6 +6,7 @@ import { data } from "jquery";
 import FormControl from "../../components/FormControl";
 import useAppContext from "../../hooks/useAppContext";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const contactForm = z.object({
   info: z.object({
@@ -55,11 +56,9 @@ const SectionServiceBook = () => {
   return (
     <section className="section--service__book">
       <div className="container">
-        <h2>REQUEST A MEET & GREET</h2>
+        <h2>YÊU CẦU MỘT CUỘC GẶP & CHÀO MỪNG</h2>
         <h6>
-          Ready to bring your pup in for day care? Please complete the form{" "}
-          <br />
-          below to schedule your dog is Meet & Greet.
+        Bạn đã sẵn sàng đưa chú chó cưng của mình đến nhà chăm sóc ban ngày chưa? Vui lòng điền vào mẫu{" "}
         </h6>
         <FormProvider {...methods}>
           <form
@@ -118,7 +117,7 @@ const SectionServiceBook = () => {
                 <div className="contact--form__list l-6 m-6 c-12">
                   <div className="contact--form__list--wrapper">
                     <label htmlFor="location" className="form-label">
-                      Shop address
+                     Địa chỉ cửa hàng
                     </label>
                     <select
                       id="location"
@@ -147,7 +146,7 @@ const SectionServiceBook = () => {
                   className="btn btn--primary"
                   onClick={onShowServiceBook}
                 >
-                  <h5>Continue</h5>
+                  <h5>Tiếp tục</h5>
                 </button>
               </div>
             </div>
@@ -177,15 +176,15 @@ const SectionServiceBook = () => {
                 <div className="contact--form__list l-6 m-6 c-12">
                   <div className="contact--form__list--wrapper">
                     <label htmlFor="type_of_pet" className="form-label">
-                      Type Of Pet
+                      Loại pet
                     </label>
                     <select
                       id="type_of_pet"
                       value={choosePetType}
                       onChange={(e) => setChoosePetType(e.target.value)}
                     >
-                      <option value="cat">Cat</option>
-                      <option value="dog">Dog</option>
+                      <option value="cat">Mèo</option>
+                      <option value="dog">Chó</option>
                     </select>
                     <span className="form-message"></span>
                   </div>
@@ -200,8 +199,8 @@ const SectionServiceBook = () => {
                       value={chooseGender}
                       onChange={(e) => setChooseGender(e.target.value)}
                     >
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
+                      <option value="male">Đực</option>
+                      <option value="female">Cái</option>
                     </select>
                     <span className="form-message"></span>
                   </div>
@@ -219,10 +218,12 @@ const SectionServiceBook = () => {
               </div>
               <div className="service--book_btn second">
                 <div className="btn btn--secondary" onClick={onShowServiceBook}>
-                  <h4>Come Back</h4>
+                  <h4>Quay lại</h4>
                 </div>
                 <button type="submit" className="btn btn--primary link">
-                  <h5>Continue</h5>
+                  <Link to="/serviceBookSuccess">
+                    <h5>Tiếp tục</h5>
+                  </Link>
                 </button>
               </div>
             </div>

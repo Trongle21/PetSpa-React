@@ -22,7 +22,7 @@ const ProductInfo = () => {
   const selectedPetTypes = data["selectedPetTypes"];
   return (
     <div className="product--info">
-      <h4>Cat and Dog</h4>
+      <h4>Mèo và chó</h4>
       <div className={`product--search ${isShowSearch ? "show" : ""}`}>
         <input
           className="search--product"

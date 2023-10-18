@@ -68,7 +68,7 @@ const RenderSlide = () => {
                     handleAddProductToCart(product.id), handleOpenCart();
                   }}
                 >
-                  Add To Cart
+                  Thêm vào giỏ hàng
                 </button>
               </div>
             </div>

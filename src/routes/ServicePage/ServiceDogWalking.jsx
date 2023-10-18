@@ -21,7 +21,7 @@ const ServiceDogWalking = () => {
                 <div className="service--image__mb">
                   <img src="https://i.ibb.co/GsY6JWd/service-1.webp" alt="" />
                 </div>
-                <h6>Pet Walking</h6>
+                <h6>Đi dạo</h6>
               </div>
               <div className="service--mb__icon">
                 <i
@@ -37,7 +37,7 @@ const ServiceDogWalking = () => {
                 isShowPetWalking ? "show--service" : "hidden--service"
               }`}
             >
-              <button className="btn btn--secondary">Book Now</button>
+              <button className="btn btn--secondary">Đặt ngay</button>
             </Link>
           </div>
           <div
@@ -45,11 +45,11 @@ const ServiceDogWalking = () => {
               isShowPetWalking ? "show--service" : "hidden--service"
             }`}
           >
-            <h5>Monday - Friday / 9:00am - 7:00pm</h5>
+            <h5>Thứ Hai - Thứ Sáu / 9:00 sáng - 7:00 tối</h5>
             <p>
-              Your Pet is well-being relies upon routine and consistency, which
-              is why we assign them a designated Pet Care Specialist and regular
-              pick-up window.
+               Sức khỏe của Thú cưng của bạn phụ thuộc vào thói quen và tính nhất quán, điều này
+               đó là lý do tại sao chúng tôi chỉ định cho họ một Chuyên gia chăm sóc thú cưng được chỉ định và thường xuyên
+               cửa sổ đón khách.
             </p>
             <div className="service--content row">
               <div className="service--content__info cheap l-6 m-6 c-12">

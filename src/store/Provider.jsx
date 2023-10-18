@@ -44,6 +44,7 @@ const AppProvider = ({ children }) => {
   const [isShowNavBar, setIsShowNavBar] = useState(false);
   const [isShowSearch, setIsShowSearch] = useState(false);
   const [isShowServiceBook, setIsShowServiceBook] = useState(false);
+  const [form, setForm] = useState("");
 
   const [totalProductPrice, setTotalProductPrice] = useState(0);
   const [state, dispatch] = useProductContext();
@@ -115,6 +116,7 @@ const AppProvider = ({ children }) => {
   const handleAddProductToCart = ({ productId, quantity = 1 }) => {
     dispatch(actions.addProductToCart(productId, quantity));
   };
+
   const productInCart = state.productCart.map((product) => ({
     product: findProductById(product.productId),
     quantity: product.quantity,
@@ -136,7 +138,8 @@ const AppProvider = ({ children }) => {
   }, [productInCart]);
 
   const handleTakeInfoUser = (data) => {
-    console.log(data);
+    // console.log(data);
+    setForm(data);
   };
 
   return (
@@ -152,6 +155,7 @@ const AppProvider = ({ children }) => {
         isShowServiceBook,
         lengthProductCart,
         totalProductPrice,
+        form,
         findProductById,
         onShowPackage: handleShowPackage,
         onOpenCart: handleOpenCart,

@@ -10,7 +10,7 @@ const HeroSectionProduct = () => {
         }}
       >
         <div className="section--hero__wrapper">
-          <div className="content--hero__name">We enjoy our work</div>
+          <div className="content--hero__name">Chúng tôi tận hưởng công việc của chúng tôi</div>
           <div className="content--hero__des"></div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import FormControl from "../../components/FormControl";
 import PathLink from "../../components/PathLink";
+import { Link } from "react-router-dom";
 
 const contactForm = z.object({
   info: z.object({
@@ -210,7 +211,7 @@ const ContactSection = () => {
             <div className="contact--form__btn">
               <div>
                 <button type="submit" className="btn btn--secondary">
-                  Submit
+                  <Link to="/contactSuccess">Submit</Link>
                 </button>
               </div>
             </div>

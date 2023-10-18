@@ -117,11 +117,11 @@ const SectionDetail = () => {
                           handleOpenCart();
                       }}
                     >
-                      Add To Cart
+                      Thêm vào giỏ hàng
                     </button>
                   </div>
                   <div className="detail--product__info--content">
-                    <h2>Description</h2>
+                    <h2>Mô tả</h2>
                     <div className="line"></div>
                     <p>{detailProduct.detail}</p>
                   </div>
@@ -131,7 +131,7 @@ const SectionDetail = () => {
           </section>
         </div>
         <section className="section--product__recommend">
-          <h2>WE ALSO RECOMMEND</h2>
+          <h2>CHÚNG TÔI CŨNG KHUYẾN NGHỊ</h2>
           <div className="line"></div>
           <div className="section--product__slide">
             <RenderSlide />

@@ -34,14 +34,6 @@ const Cart = () => {
     }
   };
 
-  // useEffect(() => {
-  //   if (isShowNavBar) {
-  //     document.addEventListener("click", () => {
-  //       onShowNavBar();
-  //     });
-  //   }
-  // });
-
   const classCart = isShowCart ? "show--cart" : "product--cart";
 
   return (
@@ -127,7 +119,7 @@ const Cart = () => {
             <Button
               className="btn btn--secondary"
               onClick={handleCheckProduct}
-              content="Place an order"
+              content="Thanh toán"
             />
           </Link>
           <div className="product--cart__total">

@@ -8,9 +8,9 @@ const TeamMember = () => {
     <section className="team-member--section container-padding">
       <div className="team-member--section__img"></div>
       <div className="container">
-        <h4 className="heading-lg text-center fw-800">Team Member</h4>
+        <h4 className="heading-lg text-center fw-800">Nhân viên</h4>
         <h2 className="heading-sm text-center margin-bottom">
-          Our store is hard-working employees
+          Cửa hàng của chúng tôi là những nhân viên làm việc chăm chỉ
         </h2>
         <div className="team-member--list padding-bottom row">
           {homeMember.map((member, index) => (
